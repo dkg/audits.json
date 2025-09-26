@@ -1,0 +1,25 @@
+image: debian:testing
+
+check:
+  stage: test
+  script:
+    - apt update -y -qq && apt install -y -qq --no-install-recommends make codespell jsonschema-jv
+    - make check
+
+pages:
+  stage: deploy
+  script:
+    - find /etc/apt -name '*.list' -exec sed -i 's/main/main non-free/' {} \; # xml2rfc is non-free
+    - "find /etc/apt -name '*.sources' -exec sed -i 's/^Components:/Components: non-free/' {} ';'"
+    - apt update -y -qq && apt install -y -qq --no-install-recommends make weasyprint xml2rfc ruby-kramdown-rfc2629 zip aasvg
+    - make publish
+  cache:
+    paths:
+      - .refcache
+  artifacts:
+    paths:
+      - public
+  only:
+    - main
+  variables:
+    DEBIAN_FRONTEND: noninteractive

@@ -1,0 +1,77 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "http://ietf.org/json_schemas/audit_schema.json",
+  "title": "Audit Report Summary",
+  "description": "Automated Discovery of Audit Reports",
+  "type": "object",
+  "properties": {
+    "operations": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "urls": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "format": "uri"
+            },
+            "uniqueItems": true,
+            "minItems": 1
+          },
+          "regs": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "format": "uri"
+            },
+            "uniqueItems": true,
+            "minItems": 1
+          },
+          "audits": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "property of top-level 'audits' object",
+            "uniqueItems": true,
+            "minItems": 1
+          }
+        },
+        "required": [
+          "urls",
+          "regs",
+          "audits"
+        ]
+      }
+    },
+    "audits": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "properties": {
+          "title": {
+            "type": "string"
+          },
+          "urls": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "format": "uri"
+            },
+            "uniqueItems": true,
+            "minItems": 1
+          }
+        },
+        "required": [
+          "title",
+          "urls"
+        ]
+      }
+    }
+  },
+  "required": [
+    "operations",
+    "audits"
+  ]
+}

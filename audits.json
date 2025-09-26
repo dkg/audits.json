@@ -1,0 +1,39 @@
+{
+  "operations": [
+    {
+      "urls": [
+        "https://example.com/jobs/sysadmin",
+        "https://example.com/jobs/clerk"
+      ],
+      "regs": [
+        "https://codelibrary.amlegal.com/codes/newyorkcity/latest/NYCrules/0-0-0-138391"
+      ],
+      "audits": [ "fizz", "sparkle" ]
+    },
+    {
+      "urls": [
+        "https://example.com/jobs/cfo",
+        "https://example.com/jobs/cto"
+      ],
+      "regs": [
+        "https://codelibrary.amlegal.com/codes/newyorkcity/latest/NYCrules/0-0-0-138391"
+      ],
+      "audits": [ "fizz" ]
+    }
+  ],
+  "audits": {
+    "fizz": {
+      "title": "Fizz Resume Prioritization Service",
+      "urls": [
+        "https://fizz.example/bias_audits/aedt_audit_2024.pdf",
+        "https://fizz.example/bias_audits/aedt_2024_data.tgz"
+      ]
+    },
+    "sparkle": {
+      "title": "Sparkle Video Analytics Assessment",
+      "urls": [
+        "https://sparkle.example/video_analytics_2023_audit.pdf"
+      ]
+    }
+  }
+}
