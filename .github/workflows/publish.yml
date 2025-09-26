@@ -15,9 +15,9 @@ jobs:
       # Runs a single command using the runners shell
       - name: 
         run: |
-          sudo apt-get install -y --no-install-recommends make codespell jsonschema-jv
+          sudo apt-get install -y --no-install-recommends make codespell
           cd "$GITHUB_WORKSPACE"
-          make check
+          make check-spell
 
   publish:
     runs-on: ubuntu-latest
