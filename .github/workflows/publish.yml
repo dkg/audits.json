@@ -15,7 +15,7 @@ jobs:
       # Runs a single command using the runners shell
       - name: 
         run: |
-          apt install --no-install-recommends make codespell jsonschema-jv
+          sudo apt-get install -y --no-install-recommends make codespell jsonschema-jv
           cd "$GITHUB_WORKSPACE"
           make check
 
@@ -29,6 +29,6 @@ jobs:
       # Runs a single command using the runners shell
       - name: 
         run: |
-          apt install --no-install-recommends make xml2rfc ruby-kramdown-rfc2629 aasvg
+          sudo apt-get install -y --no-install-recommends make xml2rfc ruby-kramdown-rfc2629 aasvg
           cd "$GITHUB_WORKSPACE"
           make publish
