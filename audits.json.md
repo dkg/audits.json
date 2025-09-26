@@ -22,8 +22,7 @@ author:
     abbrev: ACLU
     email: dkg@fifthhorseman.net
 venue:
-  repo: "https://gitlab.com/dkg/audits.json/"
-  latest: "https://dkg.gitlab.io/audits.json/"
+  repo: "https://github.com/dkg/audits.json/"
 informative:
  NYC-LL144:
    target: https://codelibrary.amlegal.com/codes/newyorkcity/latest/NYCrules/0-0-0-138391
