@@ -1,0 +1,34 @@
+name: "Check and Publish"
+
+on:
+  push:
+    branches: [ "main" ]
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v4
+
+      # Runs a single command using the runners shell
+      - name: 
+        run: |
+          apt install --no-install-recommends make codespell jsonschema-jv
+          cd "$GITHUB_WORKSPACE"
+          make check
+
+  publish:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v4
+
+      # Runs a single command using the runners shell
+      - name: 
+        run: |
+          apt install --no-install-recommends make xml2rfc ruby-kramdown-rfc2629 aasvg
+          cd "$GITHUB_WORKSPACE"
+          make publish
