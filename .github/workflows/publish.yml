@@ -9,24 +9,21 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v4
-
-      # Runs a single command using the runners shell
       - name: 
         run: |
-          sudo apt-get install -y --no-install-recommends make codespell
+          sudo apt-get install -y --no-install-recommends make codespell debian-archive-keyring
+          echo "deb [signed-by=/usr/share/keyrings/debian-archive-keyring.gpg] http://deb.debian.org/debian/ stable main" | sudo tee /etc/apt/sources.list.d/debian-stable.list
+          sudo apt-get update
+          sudo apt-get install jsonschema-jv
           cd "$GITHUB_WORKSPACE"
-          make check-spell
+          make check
 
   publish:
     runs-on: ubuntu-latest
 
     steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v4
-
-      # Runs a single command using the runners shell
       - name: 
         run: |
           sudo apt-get install -y --no-install-recommends make xml2rfc ruby-kramdown-rfc2629 aasvg
