@@ -45,7 +45,7 @@ It is motivated by regulations that require, for example, publicly accessible au
 # Introduction
 
 An increasing number of regulatory regimes require organizations involved in certain business practices to provide a degree of transparency in their business operations by posting reports of audits in an accessible location.
-For example, New York City's 2021 Local Law 144 ({{NYC-LL144}} established auditing requirements for employers who use automated decision-making tools in the employment process, but it has proved challenging to even find these audits effectively (see {{?Auditing-the-Audits=DOI.10.1145/3715275.3732004}}).
+For example, New York City's 2021 Local Law 144 ({{NYC-LL144}}) established auditing requirements for employers who use automated decision-making tools in the employment process, but it has proved challenging to even find these audits effectively (see {{?Auditing-the-Audits=DOI.10.1145/3715275.3732004}}).
 
 For a business that has a website, the natural place to provide access to the audit is on that website.
 This document describes a standard mechanism that can be used to point to any audit posted associated with regulatory compliance.
