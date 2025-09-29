@@ -74,10 +74,11 @@ Discovering an audit report is merely the first step in a process of having an e
 This specification is focused merely on this satisfying this necessary but insufficient stage of larger work.
 
 - This specification makes no attempt to describe the syntax or semantics of any particular audit report.
-  The underlying assumption is that the audit reports for different regulations or compliance measures
+  The underlying assumption is that the audit reports for different regulations or compliance measures will have different requirements for content, structure, syntax, and so on.
 
-- It also does not associate a real-world organization with a particular domain name.
+- This specification also does not associate a real-world organization with a particular domain name.
   If a researcher wants to find the audits associated with Example Corp, they need to associate Example Corp with the `example.com` domain name independently in order to use this specification.
+  Likewise, any regulation making use of this mechanism needs to explicitly describe the link between the regulated entity and the domain name or domain names on which it is expected to publish this summary.
   
 - This specification does not describe a way for a casual visitor to a given website to find these audit reports.
   A regulation that requires easy public accessibility of a report may need to offer additional user interface or user experience guidance in addition to requiring the use of this mechanism.
