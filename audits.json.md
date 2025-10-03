@@ -111,8 +111,8 @@ The overall object relationship looks like this:
 The `audits` member is an object where each member is an object with:
 
 - `title`, simple textual string describing the audit, and
-[//]: # (`date`, date object describing the calendar date (year, month, and day) of the audit's publication, and)
-[//]: # (`regs`, simple textual string describing the regulatory guidance requiring the audit, and)
+- (potential addition) `date`, date object describing the calendar date (year, month, and day) of the audit's publication, and
+- (potential addition) `regs`, simple textual string describing the regulatory guidance requiring the audit, and
 - `urls`, an array of URLs that point to the relevant materials for the audit
 
 ## operations Content
@@ -173,8 +173,8 @@ Please propose more pointers for this subsection!
 # Open Questions
 
 - should we allow wildcards in `/operations/*/urls` ? -> MKG thoughts: i'm not sure i understand the benefits/tradeoffs here, but will try to educate myself and help think through this
-- does the pointer to the regulations belong in operations -> MKG thoughts: i like the way you've got it set up now, where regs lives in operations   as an array, as there could be multiple different regs that apply to a particular business operation, some of which require audits and some of which do not (unless I'm misunderstanding, and we only want regs there that specifically have a direct mapping to audits). I think it could be worth also having regs in audits, where regs within the audits object refers to the specific regulation(s) that generate the associated audit (see suggested edit above, commented out for now but if you agree I can make the corresponding edits in `audits.json` and `audits-schema.json`).
-- do we need some sort of date ranges? -> MKG thoughts: i think it's a good idea to have some sort of date for the audit, i think the easiest/most  flexible way to do this is to make it the audit publication date. see suggestions above, also commented out for now. 
+- does the pointer to the regulations belong in operations -> MKG thoughts: i like the way you've got it set up now, where regs lives in operations   as an array, as there could be multiple different regs that apply to a particular business operation, some of which require audits and some of which do not (unless I'm misunderstanding, and we only want regs there that specifically have a direct mapping to audits). I think it could be worth also having regs in audits, where regs within the audits object refers to the specific regulation(s) that generate the associated audit (see suggested edit above, if you agree I can suggest corresponding edits in `audits.json` and `audits-schema.json`).
+- do we need some sort of date ranges? -> MKG thoughts: i think it's a good idea to have some sort of date for the audit, i think the easiest/most  flexible way to do this is to make it the audit publication date. see suggestions above; if you think this makes sense i can suggest edits for `audits.json` and `audits-schema.json`. 
 - what about internationalization?
   we have some human-readable strings in here.
 - How should a would-be regulator describe the URL to place in `/operations/*/regs` to refer to their specific regulation? -> MKG thoughts: this is a good question, i'm going to think about how to set this up in the context of something like rulemaking (where there may not be a great shorthand for the regs), but at least for legislatively required audits, i think it could either be something like state/city abbreviation + legislative chamber/body + id + year (e.g., some verison of nyc ll144 2023 or co sb205 2024) or some identifier to the relevant administrative code section. 
