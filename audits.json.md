@@ -29,6 +29,10 @@ informative:
    target: https://codelibrary.amlegal.com/codes/newyorkcity/latest/NYCrules/0-0-0-138391
    title: "Rules of the City of New York: Automated Employment Decision Tools"
    date: April 2023
+CO-SB205:
+   target: https://leg.colorado.gov/sites/default/files/2024a_205_signed.pdf
+   title: "SENATE BILL 24-205"
+   date: May 2024
  JV:
    target: https://github.com/santhosh-tekuri/jsonschema
    title: JSONSchema Validation using Go
@@ -60,7 +64,7 @@ Adoption of this mechanism should make it easier for businesses to comply with t
 
 ## Terminology
 
-- An "audit report" is a document produced by an organization to describe -- according to some kind of regulatory compliance -- a part of their business operations.
+- An "audit report" is a document produced by an organization or an independent entity commissioned by the organization to describe -- according to some kind of regulatory compliance -- a part of the organization's business operations.
 
 ## Goals
 
@@ -106,16 +110,18 @@ The overall object relationship looks like this:
 
 The `audits` member is an object where each member is an object with:
 
-- `title`, simple textual string describing the audited tool, and
+- `title`, simple textual string describing the audit, and
+[//]: # (`date`, date object describing the calendar date (year, month, and day) of the audit's publication, and)
+[//]: # (`regs`, simple textual string describing the regulatory guidance requiring the audit, and)
 - `urls`, an array of URLs that point to the relevant materials for the audit
 
 ## operations Content
 
 The `operations` member is a list of objects, each of which describes some set of business operations, via the following members:
 
-- `urls`, an array of URLs, each of which describes an operation covered by this object (for example, a job listing),
+- `urls`, an array of URLs, each of which describes a business operation covered by this object (for example, a job listing),
 - `regs`, an array of URLs, each of which refers to a piece of regulatory guidance, and
-- `audits`, an array of keys which can be used to point to 
+- `audits`, an array of keys which can be used to point to specific audits
 
 # IANA Considerations
 
@@ -162,17 +168,18 @@ jv audits-schema.json audits.json
 Please propose more pointers for this subsection!
 
 - {{NYC-LL144}} established requirements for employers in New York City to publish audits of automated decision-making tools used for hiring
+- Colorado's SB 205 {{CO-SB205}} requires developers of some artificial intelligence systems to publish reports about the design and deployment of such systems on their websites
 
 # Open Questions
 
-- should we allow wildcards in `/operations/*/urls` ?
-- does the pointer to the regulations belong in operations
-- do we need some sort of date ranges?
+- should we allow wildcards in `/operations/*/urls` ? -> MKG thoughts: i'm not sure i understand the benefits/tradeoffs here, but will try to educate myself and help think through this
+- does the pointer to the regulations belong in operations -> MKG thoughts: i like the way you've got it set up now, where regs lives in operations   as an array, as there could be multiple different regs that apply to a particular business operation, some of which require audits and some of which do not (unless I'm misunderstanding, and we only want regs there that specifically have a direct mapping to audits). I think it could be worth also having regs in audits, where regs within the audits object refers to the specific regulation(s) that generate the associated audit (see suggested edit above, commented out for now but if you agree I can make the corresponding edits in `audits.json` and `audits-schema.json`).
+- do we need some sort of date ranges? -> MKG thoughts: i think it's a good idea to have some sort of date for the audit, i think the easiest/most  flexible way to do this is to make it the audit publication date. see suggestions above, also commented out for now. 
 - what about internationalization?
   we have some human-readable strings in here.
-- How should a would-be regulator describe the URL to place in `/operations/*/regs` to refer to their specific regulation?
+- How should a would-be regulator describe the URL to place in `/operations/*/regs` to refer to their specific regulation? -> MKG thoughts: this is a good question, i'm going to think about how to set this up in the context of something like rulemaking (where there may not be a great shorthand for the regs), but at least for legislatively required audits, i think it could either be something like state/city abbreviation + legislative chamber/body + id + year (e.g., some verison of nyc ll144 2023 or co sb205 2024) or some identifier to the relevant administrative code section. 
 - Can the json schema help enforce the "foreign key constraint" between `/operations/*/audits` and `/audits`?
-  I've [asked asked for guidance](https://github.com/orgs/json-schema-org/discussions/934#discussioncomment-14525369) from JSON Schema folks.
+  I've [asked asked for guidance](https://github.com/orgs/json-schema-org/discussions/934#discussioncomment-14525369) from JSON Schema folks. -> MKG thoughts: seeing that JSON Schema folks said this isn't feasible; am I understanding correctly that the idea here is to find some way to ensure that audits are companies saying pertain to specific business operations actually exist where they should?
 
 {:numbered="false"}
 # Acknowledgements
