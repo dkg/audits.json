@@ -162,6 +162,8 @@ For example, you can validate this using with {{JV}}:
 jv audits-schema.json audits.json
 ```
 
+Note that JSON Schema cannot represent foreign key constraints, so the fact that each `/operations/*/audits` must reference a named member of `/audits` needs to be enforced separately.
+
 # Examples of Regulatory Regimes
 
 Please propose more pointers for this subsection!
@@ -174,8 +176,6 @@ Please propose more pointers for this subsection!
 - what about internationalization?
   we have some human-readable strings in here.
 - How should a would-be regulator describe the URL to place in `/operations/*/regs` to refer to their specific regulation? -> MKG thoughts: this is a good question, i'm going to think about how to set this up in the context of something like rulemaking (where there may not be a great shorthand for the regs), but at least for legislatively required audits, i think it could either be something like state/city abbreviation + legislative chamber/body + id + year (e.g., some version of nyc ll144 2023 or co sb205 2024) or some identifier to the relevant administrative code section. 
-- Can the json schema help enforce the "foreign key constraint" between `/operations/*/audits` and `/audits`?
-  I've [asked asked for guidance](https://github.com/orgs/json-schema-org/discussions/934#discussioncomment-14525369) from JSON Schema folks. -> MKG thoughts: seeing that JSON Schema folks said this isn't feasible; am I understanding correctly that the idea here is to find some way to ensure that audits are companies saying pertain to specific business operations actually exist where they should?
 
 {:numbered="false"}
 # Acknowledgements
