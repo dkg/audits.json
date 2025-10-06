@@ -112,7 +112,6 @@ The `audits` member is an object where each member is an object with:
 
 - `title`, simple textual string describing the audit, and
 - `date`, date object describing the calendar date (year, month, and day) of the audit's publication, and
-- (potential addition) `regs`, simple textual string describing the regulatory guidance requiring the audit, and
 - `urls`, an array of URLs that point to the relevant materials for the audit
 
 ## operations Content
