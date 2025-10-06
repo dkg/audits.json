@@ -171,7 +171,6 @@ Please propose more pointers for this subsection!
 
 # Open Questions
 
-- does the pointer to the regulations belong in operations -> MKG thoughts: i like the way you've got it set up now, where regs lives in operations   as an array, as there could be multiple different regs that apply to a particular business operation, some of which require audits and some of which do not (unless I'm misunderstanding, and we only want regs there that specifically have a direct mapping to audits). I think it could be worth also having regs in audits, where regs within the audits object refers to the specific regulation(s) that generate the associated audit (see suggested edit above, if you agree I can suggest corresponding edits in `audits.json` and `audits-schema.json`).
 - do we need some sort of date ranges? -> MKG thoughts: i think it's a good idea to have some sort of date for the audit, i think the easiest/most  flexible way to do this is to make it the audit publication date. see suggestions above; if you think this makes sense i can suggest edits for `audits.json` and `audits-schema.json`. 
 - what about internationalization?
   we have some human-readable strings in here.
