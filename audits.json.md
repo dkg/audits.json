@@ -171,8 +171,6 @@ Please propose more pointers for this subsection!
 - {{NYC-LL144}} established requirements for employers in New York City to publish audits of automated decision-making tools used for hiring
 - Colorado's SB 205 {{CO-SB205}} requires developers of some artificial intelligence systems to publish reports about the design and deployment of such systems on their websites
 
-# Open Questions
-
 {:numbered="false"}
 # Acknowledgements
 
