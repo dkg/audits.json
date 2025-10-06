@@ -175,7 +175,6 @@ Please propose more pointers for this subsection!
 
 - what about internationalization?
   we have some human-readable strings in here.
-- How should a would-be regulator describe the URL to place in `/operations/*/regs` to refer to their specific regulation? -> MKG thoughts: this is a good question, i'm going to think about how to set this up in the context of something like rulemaking (where there may not be a great shorthand for the regs), but at least for legislatively required audits, i think it could either be something like state/city abbreviation + legislative chamber/body + id + year (e.g., some version of nyc ll144 2023 or co sb205 2024) or some identifier to the relevant administrative code section. 
 
 {:numbered="false"}
 # Acknowledgements
