@@ -27,13 +27,15 @@
       "urls": [
         "https://fizz.example/bias_audits/aedt_audit_2024.pdf",
         "https://fizz.example/bias_audits/aedt_2024_data.tgz"
-      ]
+      ],
+      "date": "2024-12-13"
     },
     "sparkle": {
       "title": "Sparkle Video Analytics Assessment",
       "urls": [
         "https://sparkle.example/video_analytics_2023_audit.pdf"
-      ]
+      ],
+      "date": "2024-01-15"
     }
   }
 }

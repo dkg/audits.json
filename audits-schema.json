@@ -50,6 +50,10 @@
       "additionalProperties": {
         "type": "object",
         "properties": {
+          "date": {
+            "type": "string",
+            "format": "date"
+          },
           "title": {
             "type": "string"
           },
@@ -64,6 +68,7 @@
           }
         },
         "required": [
+          "date",
           "title",
           "urls"
         ]
