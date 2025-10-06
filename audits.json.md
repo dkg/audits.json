@@ -173,9 +173,6 @@ Please propose more pointers for this subsection!
 
 # Open Questions
 
-- what about internationalization?
-  we have some human-readable strings in here.
-
 {:numbered="false"}
 # Acknowledgements
 
