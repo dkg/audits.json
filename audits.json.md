@@ -31,7 +31,7 @@ informative:
    date: April 2023
 CO-SB205:
    target: https://leg.colorado.gov/sites/default/files/2024a_205_signed.pdf
-   title: "SENATE BILL 24-205"
+   title: "Colorado Senate Bill 24-205"
    date: May 2024
  JV:
    target: https://github.com/santhosh-tekuri/jsonschema
