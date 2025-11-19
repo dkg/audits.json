@@ -21,6 +21,11 @@ author:
     org: American Civil Liberties Union
     abbrev: ACLU
     email: dkg@fifthhorseman.net
+
+    name: Marissa Kumar Gerchick
+    org: American Civil Liberties Union
+    abbrev: ACLU
+    email: mgerchick@aclu.org
 venue:
   repo: "https://github.com/dkg/audits.json/"
   latest: "https://dkg.github.io/audits.json/"
