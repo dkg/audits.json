@@ -173,6 +173,16 @@ Please propose more pointers for this subsection!
 - {{NYC-LL144}} established requirements for employers in New York City to publish audits of automated decision-making tools used for hiring
 - Colorado's SB 205 {{CO-SB205}} requires developers of some artificial intelligence systems to publish reports about the design and deployment of such systems on their websites
 
+## Example Regulatory Text
+
+A regulation or law that relies on this mechanism to point toward relevant audits can cite it using text similar to the following:
+
+> Any Covered Organization that has a public-facing website should
+> publicly reference the Required Audits using
+> a widely understood mechanism such as `audits.json`.
+> The Required Audits associated with this act should refer to
+> the act as `https://springfield.example/citycouncil/acts/2025/114`
+
 {:numbered="false"}
 # Acknowledgements
 
