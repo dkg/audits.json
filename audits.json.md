@@ -1,7 +1,7 @@
 ---
 title: Automated Discovery Of Audit Reports (audits.json)
 abbrev: audits.json
-docname: draft-dkg-audits-json-00
+docname: draft-dkg-audits-json-01
 category: info
 v: 3
 ipr: trust200902
