@@ -176,6 +176,6 @@ Please propose more pointers for this subsection!
 {:numbered="false"}
 # Acknowledgements
 
-{:numbered="false"}
+{:numbered="false" removeInRFC="true"}
 # Document History
 
