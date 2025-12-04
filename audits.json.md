@@ -3,17 +3,14 @@ title: Automated Discovery Of Audit Reports (audits.json)
 abbrev: audits.json
 docname: draft-dkg-audits-json-00
 category: info
-
 v: 3
 ipr: trust200902
 area: int
 workgroup: intarea
 keyword: Internet-Draft
 submissionType: IETF
-
 stand_alone: yes
 pi: [toc, sortrefs, symrefs]
-
 author:
  -
     ins: D. K. Gillmor
@@ -21,7 +18,7 @@ author:
     org: American Civil Liberties Union
     abbrev: ACLU
     email: dkg@fifthhorseman.net
-
+ -
     name: Marissa Kumar Gerchick
     org: American Civil Liberties Union
     abbrev: ACLU
@@ -30,19 +27,19 @@ venue:
   repo: "https://github.com/dkg/audits.json/"
   latest: "https://dkg.github.io/audits.json/"
 informative:
- NYC-LL144:
-   target: https://codelibrary.amlegal.com/codes/newyorkcity/latest/NYCrules/0-0-0-138391
-   title: "Rules of the City of New York: Automated Employment Decision Tools"
-   date: April 2023
-CO-SB205:
-   target: https://leg.colorado.gov/sites/default/files/2024a_205_signed.pdf
-   title: "Colorado Senate Bill 24-205"
-   date: May 2024
- JV:
-   target: https://github.com/santhosh-tekuri/jsonschema
-   title: JSONSchema Validation using Go
-   author:
-     name: Santhosh Kumar Tekuri
+  NYC-LL144:
+    target: https://codelibrary.amlegal.com/codes/newyorkcity/latest/NYCrules/0-0-0-138391
+    title: "Rules of the City of New York: Automated Employment Decision Tools"
+    date: April 2023
+  CO-SB205:
+    target: https://leg.colorado.gov/sites/default/files/2024a_205_signed.pdf
+    title: "Colorado Senate Bill 24-205"
+    date: May 2024
+  JV:
+    target: https://github.com/santhosh-tekuri/jsonschema
+    title: JSONSchema Validation using Go
+    author:
+      name: Santhosh Kumar Tekuri
 
 --- abstract
 
