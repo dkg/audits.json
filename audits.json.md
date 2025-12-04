@@ -177,11 +177,13 @@ Please propose more pointers for this subsection!
 
 A regulation or law that relies on this mechanism to point toward relevant audits can cite it using text similar to the following:
 
-> Any Covered Organization that has a public-facing website should
-> publicly reference the Required Audits using
-> a widely understood mechanism such as `audits.json`.
-> The Required Audits associated with this act should refer to
+> Any Covered Organization that has a public-facing website shall
+> publicly point to the Required Audits associated with each position using
+> a widely understood mechanism such as the `audits.json` specification.
+> The Required Audits associated with this act shall refer to
 > the act as `https://springfield.example/citycouncil/acts/2025/114`
+
+(note that this text presumes that the regulation has defined the terms "Covered Organization" and "Required Audits")
 
 {:numbered="false"}
 # Acknowledgements
