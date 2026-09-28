@@ -35,6 +35,10 @@ informative:
     target: https://leg.colorado.gov/sites/default/files/2024a_205_signed.pdf
     title: "Colorado Senate Bill 24-205"
     date: May 2024
+  CCPA:
+    target: https://cppa.ca.gov/regulations/pdf/ccpa_statute_eff_20260101.pdf
+    title: "California Consumer Privacy Act Regulations"
+    date: January 2026
   JV:
     target: https://github.com/santhosh-tekuri/jsonschema
     title: JSONSchema Validation using Go
@@ -172,6 +176,9 @@ Please propose more pointers for this subsection!
 
 - {{NYC-LL144}} established requirements for employers in New York City to publish audits of automated decision-making tools used for hiring
 - Colorado's SB 205 {{CO-SB205}} requires developers of some artificial intelligence systems to publish reports about the design and deployment of such systems on their websites
+- The California Consumer Privacy Act {{CCPA}} requires businesses
+  to create "Risk Assessment Reports" about their use of Automated Decision-Making Technology (ADMT)
+  as well as regular cybersecurity audits.
 
 ## Example Regulatory Text
 
