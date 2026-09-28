@@ -32,7 +32,7 @@ clean:
 check-spell:
 	codespell --ignore-words .ignore-words $(draft).md
 check-schema:
-	jv -assertformat -output detailed audits-schema.json audits.json
+	jv --assert-format --output detailed audits-schema.json audits.json
 
 check: check-spell check-schema
 .PHONY: clean all check publish check-spell check-schema
