@@ -178,7 +178,8 @@ Please propose more pointers for this subsection!
 - Colorado's SB 205 {{CO-SB205}} requires developers of some artificial intelligence systems to publish reports about the design and deployment of such systems on their websites
 - The California Consumer Privacy Act {{CCPA}} requires businesses
   to create "Risk Assessment Reports" about their use of Automated Decision-Making Technology (ADMT)
-  as well as regular cybersecurity audits.
+  as well as pre-use notices about ADMT use
+  and regular cybersecurity audits.
 
 ## Example Regulatory Text
 
