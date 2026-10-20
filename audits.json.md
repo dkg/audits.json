@@ -199,3 +199,8 @@ A regulation or law that relies on this mechanism to point toward relevant audit
 {:numbered="false" removeInRFC="true"}
 # Document History
 
+{:numbered="false" removeInRFC="true"}
+## Changes between -00 and -01
+
+- added references to CCPA
+- align schema test for jv CLI API 0.7
