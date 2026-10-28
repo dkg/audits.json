@@ -114,7 +114,7 @@ The overall object relationship looks like this:
 
 ## audits Content
 
-The `audits` member is an object where each member is an object with:
+The `audits` member is an object where each named member is an object with the following members:
 
 - `title`, simple textual string describing the audit, and
 - `date`, date object describing the calendar date (year, month, and day) of the audit's publication, and
@@ -126,7 +126,7 @@ The `operations` member is a list of objects, each of which describes some set o
 
 - `urls`, an array of URLs, each of which describes a business operation covered by this object (for example, a job listing),
 - `regs`, an array of URLs, each of which refers to a piece of regulatory guidance, and
-- `audits`, an array of keys which can be used to point to specific audits
+- `audits`, an array of keys which can be used to point to specific audits by name
 
 # IANA Considerations
 
