@@ -2,6 +2,6 @@
 | operations |   .-->| audits |
 +------------+  |    +--------+
 | urls       |  |    | title  |
-| regs       |  |    | urls   |
-| audits     +-'     +--------+
-+------------+
+| regs       |  |    | date   |
+| audits     +-'     | urls   |
++------------+       +--------+
