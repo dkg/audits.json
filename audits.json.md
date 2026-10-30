@@ -164,9 +164,9 @@ The following JSON Schema (see {{?I-D.bhutton-json-schema-01}}) can be used to v
 
 For example, you can validate this using with {{JV}}:
 
-```
+~~~
 jv audits-schema.json audits.json
-```
+~~~
 
 Note that JSON Schema cannot represent foreign key constraints, so the fact that each `/operations/*/audits` must reference a named member of `/audits` needs to be enforced separately.
 
