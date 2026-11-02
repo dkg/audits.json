@@ -195,6 +195,40 @@ A regulation or law that relies on this mechanism to point toward relevant audit
 has defined the terms
 "Covered Organization", "Covered Operation", and "Required Audits")
 
+# Third-party Hosting
+
+Some entities subject to regulatory obligations
+might find it challenging to host a reliably up-to-date `audits.json`
+on their website.
+
+Such an entity may want to contract with
+a regulatory compliance consultancy
+in order to keep this record up-to-date without
+providing the consultancy write privileges for the entity's entire website,
+or even for material in the website's `.well-known/` directory.
+
+Such a consultancy might themselves have multiple clients.
+The consultancy could host a repository of their clients' `audits.json` files,
+for example in locations like:
+
+    https://consultancy.example/clients/example.com/audits.json
+    https://consultancy.example/clients/entity1.example/audits.json
+
+And then ask each client to set up
+a one-time HTTP 302 redirect from the appropriate location on their site, like so:
+
+   https://example.com/.well-known/audits.json redirects to
+   https://consultancy.example/clients/example.com/audits.json
+
+and
+
+   https://entity1.example/.well-known/audits.json redirects to
+   https://consultancy.example/clients/entity1.example/audits.json
+
+This standard should continue to meet its
+goals of responsiveness and discoverability
+under such a third-party-hosted arrangement.
+
 {:numbered="false"}
 # Acknowledgements
 
