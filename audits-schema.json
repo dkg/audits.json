@@ -22,8 +22,24 @@
           "regs": {
             "type": "array",
             "items": {
-              "type": "string",
-              "format": "uri"
+              "type": "object",
+              "properties": {
+                "uri": {
+                  "type": "string",
+                  "format": "uri"
+                },
+                "not_before": {
+                  "type": "string",
+                  "format": "date"
+                },
+                "not_after": {
+                  "type": "string",
+                  "format": "date"
+                }
+              },
+              "required": [
+                "uri"
+              ]
             },
             "uniqueItems": true,
             "minItems": 1
