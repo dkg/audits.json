@@ -99,7 +99,7 @@ This specification uses the `.well-known` URL space defined by {{!RFC8615}}.
 
 A given domain hosts the `audits.json` summary in `/.well-known/audits.json` within the website operated by the organization.
 
-If Example Corporation operats `https://example.com/`, then the summary report would be found at `https://example.com/.well-known/audits.json`.
+If Example Corporation operates `https://example.com/`, then the summary report would be found at `https://example.com/.well-known/audits.json`.
 
 # audits.json Structure
 
