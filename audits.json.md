@@ -81,7 +81,7 @@ Adoption of this mechanism should make it easier for businesses to comply with t
 ## Non-Goals
 
 Discovering an audit report is merely the first step in a process of having an effective regulatory regime based on audits.
-This specification is focused merely on this satisfying this necessary but insufficient stage of larger work.
+This specification is focused on satisfying this necessary but insufficient stage of larger work.
 
 - This specification makes no attempt to describe the syntax or semantics of any particular audit report.
   The underlying assumption is that the audit reports for different regulations or compliance measures will have different requirements for content, structure, syntax, and so on.
