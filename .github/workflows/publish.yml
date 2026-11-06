@@ -13,7 +13,7 @@ jobs:
       - name: 
         run: |
           sudo apt-get install -y --no-install-recommends codespell debian-archive-keyring
-          echo "deb [signed-by=/usr/share/keyrings/debian-archive-keyring.gpg] http://deb.debian.org/debian/ stable main" | sudo tee /etc/apt/sources.list.d/debian-stable.list
+          echo "deb [signed-by=/usr/share/keyrings/debian-archive-keyring.gpg] http://deb.debian.org/debian/ testing main" | sudo tee /etc/apt/sources.list.d/debian-stable.list
           sudo apt-get update
           sudo apt-get install jsonschema-jv
           cd "$GITHUB_WORKSPACE"
