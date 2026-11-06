@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
       - name: 
         run: |
           sudo apt-get install -y --no-install-recommends codespell debian-archive-keyring
@@ -24,7 +24,7 @@ jobs:
 
     steps:
       - name: Checkout repo
-        uses: actions/checkout@v5
+        uses: actions/checkout@v7
       - name: Configure Github™ Pages
         uses: actions/configure-pages@v5
       - name: Build html
@@ -49,4 +49,4 @@ jobs:
     steps:
       - name: Deploy to GitHub™ Pages
         id: deployment
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v5
