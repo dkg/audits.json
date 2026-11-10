@@ -175,7 +175,7 @@ Note that JSON Schema cannot represent foreign key constraints, so the fact that
 Please propose more pointers for this subsection!
 
 - {{NYC-LL144}} established requirements for employers in New York City to publish audits of automated decision-making tools used for hiring
-- Colorado's SB 26-289 {{CO-SB26189}} requires developers of some artificial intelligence systems to publish reports about the design and deployment of such systems on their websites
+- Colorado's SB 26-289 {{CO-SB26189}} requires deployers of automated decision-making systems to provide consumers with pre-use notices about the design and deployment of such systems on their websites
 - The California Consumer Privacy Act {{CCPA}} requires businesses
   to create "Risk Assessment Reports" about their use of Automated Decision-Making Technology (ADMT)
   as well as pre-use notices about ADMT use
