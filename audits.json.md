@@ -31,10 +31,10 @@ informative:
     target: https://codelibrary.amlegal.com/codes/newyorkcity/latest/NYCrules/0-0-0-138391
     title: "Rules of the City of New York: Automated Employment Decision Tools"
     date: April 2023
-  CO-SB205:
-    target: https://leg.colorado.gov/sites/default/files/2024a_205_signed.pdf
-    title: "Colorado Senate Bill 24-205"
-    date: May 2024
+  CO-SB26189:
+    target: https://leg.colorado.gov/bills/sb26-189
+    title: "Colorado Senate Bill 26-189"
+    date: May 2026
   CCPA:
     target: https://cppa.ca.gov/regulations/pdf/ccpa_statute_eff_20260101.pdf
     title: "California Consumer Privacy Act Regulations"
@@ -175,7 +175,7 @@ Note that JSON Schema cannot represent foreign key constraints, so the fact that
 Please propose more pointers for this subsection!
 
 - {{NYC-LL144}} established requirements for employers in New York City to publish audits of automated decision-making tools used for hiring
-- Colorado's SB 205 {{CO-SB205}} requires developers of some artificial intelligence systems to publish reports about the design and deployment of such systems on their websites
+- Colorado's SB 289 {{CO-SB26189}} requires deployers of automated decision-making systems to provide consumers with pre-use notices about the design and deployment of such systems on their websites
 - The California Consumer Privacy Act {{CCPA}} requires businesses
   to create "Risk Assessment Reports" about their use of Automated Decision-Making Technology (ADMT)
   as well as pre-use notices about ADMT use
