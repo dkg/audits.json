@@ -25,15 +25,34 @@
     "fizz": {
       "title": "Fizz Resume Prioritization Service",
       "urls": [
-        "https://fizz.example/bias_audits/aedt_audit_2024.pdf",
-        "https://fizz.example/bias_audits/aedt_2024_data.tgz"
+        {
+          "url": "https://fizz.example/bias_audits/aedt_audit_2024.en.pdf",
+          "type": "application/pdf",
+          "lang": "en",
+          "sha256": "23ad07c956a61be526d61e0b84104449eb22af46eb69fa9bd9c1a25981a06588"
+        },
+        {
+          "url": "https://fizz.example/bias_audits/aedt_audit_2024.es.pdf",
+          "type": "application/pdf",
+          "lang": "es",
+          "sha256": "eed741fb0861923232160701f2e9e62cb1bb05f8a7df2c84067b5ede129e9090"
+        },
+        {
+          "url": "https://fizz.example/bias_audits/aedt_2024_data.tgz",
+          "type": "application/gzip",
+          "sha256": "c3aaf34979af7b6893d9b7da5d97d88b3e861c8d4fb69443c861230db59ac607"
+        }
       ],
       "date": "2024-12-13"
     },
     "sparkle": {
       "title": "Sparkle Video Analytics Assessment",
       "urls": [
-        "https://sparkle.example/video_analytics_2023_audit.pdf"
+        {
+          "url": "https://sparkle.example/video_analytics_2023_audit.pdf",
+          "type": "application/pdf",
+          "lang": "en"
+        }
       ],
       "date": "2024-01-15"
     }
