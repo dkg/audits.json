@@ -118,7 +118,33 @@ The `audits` member is an object where each named member is an object with the f
 
 - `title`, simple textual string describing the audit, and
 - `date`, date object describing the calendar date (year, month, and day) of the audit's publication, and
-- `urls`, an array of URLs that point to the relevant materials for the audit
+- `urls`, an array of URL entries (see {{url-entries}}) that point to the relevant materials for the audit
+
+### URL Entries {#url-entries}
+
+Each element of the `urls` array of an audit is an object that describes one file, with the following members:
+
+- `url` (required), the URL of the file,
+- `type` (required), the media type of the file (see {{?RFC6838}}), for example `application/pdf`,
+- `lang` (optional), a language tag (see {{?RFC5646}}) for the language of the file, omitted when the file has no single natural language (for example, a data archive), and
+- `sha256` (optional), the SHA-256 digest (see {{?RFC6234}}) of the file, written as 64 lowercase hexadecimal digits.
+
+Two entries in the same `urls` array MUST NOT have the same `url`.
+
+`type` and `lang` describe the file found at `url`.
+They are not selectors for content negotiation.
+If an audit report is published in several formats or languages, each version is a separate entry with its own `url` and `type` and, when supplied, its own `lang` and `sha256`.
+
+`sha256` is computed over the complete bytes of the file, after removing any HTTP transfer coding and decoding any HTTP content coding, with no further transformation.
+Compression that is part of the file format itself, such as a gzip-compressed tar archive served as `application/gzip`, remains part of those bytes.
+The `Repr-Digest` and `Content-Digest` fields of {{?RFC9530}} cover the entire selected representation data and the actual HTTP message content, respectively, including any content coding.
+The `sha256` member defined here covers the complete file after decoding HTTP content coding and records the digest in the audit summary, independently of the HTTP fields.
+
+An organization that controls the bytes of a file at the time it publishes the summary SHOULD include `sha256`.
+It might omit `sha256` when the file is hosted by a third party that may change it, or when the URL points to a page that is expected to change.
+A reader that has a copy of a file can compare its digest with `sha256` without fetching the file again.
+A matching digest shows that the file is the one the summary describes.
+It does not authenticate the publisher of the summary, and it does not show when the file was published.
 
 ## operations Content
 
@@ -153,6 +179,8 @@ IANA should register `audits.json` in the "Well-Known URIs" registry, with the f
 {::include audits.json}
 ~~~
 
+The `sha256` values in this example are placeholders and are not digests of real files.
+
 # JSON Schema For audits.json
 
 The following JSON Schema (see {{?I-D.bhutton-json-schema-01}}) can be used to validate an `audits.json` summary file.
@@ -169,6 +197,7 @@ jv audits-schema.json audits.json
 ~~~
 
 Note that JSON Schema cannot represent foreign key constraints, so the fact that each `/operations/*/audits` must reference a named member of `/audits` needs to be enforced separately.
+Likewise, the requirement that no two entries in one `/audits/*/urls` array have the same `url` needs to be enforced separately.
 
 # Examples of Regulatory Regimes
 
@@ -206,3 +235,8 @@ has defined the terms
 
 - added references to CCPA
 - align schema test for jv CLI API 0.7
+
+{:numbered="false" removeInRFC="true"}
+## Changes between -01 and -02
+
+- each entry in `audits.*.urls` is now an object with `url`, `type`, and optional `lang` and `sha256`
