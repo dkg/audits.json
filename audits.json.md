@@ -125,8 +125,31 @@ The `audits` member is an object where each named member is an object with the f
 The `operations` member is a list of objects, each of which describes some set of business operations, via the following members:
 
 - `urls`, an array of URLs, each of which describes a business operation covered by this object (for example, a job listing),
-- `regs`, an array of URLs, each of which refers to a piece of regulatory guidance, and
+- `regs`, an array of "Regulation" objects, described in {{regulation}}.
 - `audits`, an array of keys which can be used to point to specific audits by name
+
+### Regulation objects {#regulation}
+
+A Regulations object is one element in an array within an `operations` object
+that indicates the range of regulations that are
+relevant for the regulation and the operation.
+
+The only required member for this object is:
+
+- `uri`, a URI which refers to a specific piece of regulatory guidance
+  (i.e., a unique identifier that is associated with the requirements that
+  the operation needs to comply with).
+
+The other defined (but not required) members are:
+
+- `not_before`, a time marker indicating the calendar date (year, month, and day)
+  when the regulation first became relevant for the operation.
+- `not_after`, a time marker indicating the calendar date (year, month, and day)
+  at which point the regulation is no longer relevant for the operation.
+
+When both are present, `not_after` MUST be later than `not_before`,
+but both values MAY be in the future or the past,
+as a way to indicate prospective or retrospective compliance.
 
 # IANA Considerations
 

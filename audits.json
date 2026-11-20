@@ -6,7 +6,8 @@
         "https://example.com/jobs/clerk"
       ],
       "regs": [
-        "https://codelibrary.amlegal.com/codes/newyorkcity/latest/NYCrules/0-0-0-138391"
+        {"uri":
+         "https://codelibrary.amlegal.com/codes/newyorkcity/latest/NYCrules/0-0-0-138391"}
       ],
       "audits": [ "fizz", "sparkle" ]
     },
@@ -16,7 +17,8 @@
         "https://example.com/jobs/cto"
       ],
       "regs": [
-        "https://codelibrary.amlegal.com/codes/newyorkcity/latest/NYCrules/0-0-0-138391"
+        {"uri":
+         "https://codelibrary.amlegal.com/codes/newyorkcity/latest/NYCrules/0-0-0-138391"}
       ],
       "audits": [ "fizz" ]
     }
