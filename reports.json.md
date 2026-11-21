@@ -156,15 +156,23 @@ insufficient stage of larger work.
 
 # Locating The reports.json Summary {#location}
 
-This specification uses the `.well-known` URL space defined by {{!RFC8615}}.
+This specification uses
+the `.well-known` URL space defined by {{!RFC8615}}.
 
-A given domain hosts the `reports.json` summary in `/.well-known/reports.json` within the website operated by the organization.
+A given domain hosts the `reports.json` summary
+in `/.well-known/reports.json`
+within the website operated by the organization.
 
-If Example Corporation operates `https://example.com/`, then the summary report would be found at `https://example.com/.well-known/reports.json`.
+If Example Corporation operates `https://example.com/`,
+then the summary report would be found at
+`https://example.com/.well-known/reports.json`.
 
 # `reports.json` Structure
 
-The object served from the URL described in {{location}} will have `Content-Type: application/json`, and will consist of a single dictionary object with at least two top-level keys: `operations` and `reports`.
+The object served from the URL described in {{location}}
+will have `Content-Type: application/json`,
+and will consist of a single dictionary object
+with at least two top-level keys: `operations` and `reports`.
 
 The overall object relationship looks like this:
 
@@ -175,19 +183,27 @@ The overall object relationship looks like this:
 
 ## `reports` Content
 
-The `reports` member is an object where each named member is an object with the following members:
+The `reports` member is an object where each named member is
+an object with the following members:
 
 - `title`, simple textual string describing the report, and
-- `date`, date object describing the calendar date (year, month, and day) of the report's publication, and
-- `urls`, an array of URLs that point to the relevant materials for the report
+- `date`, date object describing the calendar date
+  (year, month, and day) of the report's publication, and
+- `urls`, an array of URLs that point to
+  the relevant materials for the report
 
 ## operations Content
 
-The `operations` member is a list of objects, each of which describes some set of business operations, via the following members:
+The `operations` member is a list of objects,
+each of which describes some set of business operations,
+via the following members:
 
-- `urls`, an array of URLs, each of which describes a business operation covered by this object (for example, a job listing),
+- `urls`, an array of URLs,
+  each of which describes a business operation
+  covered by this object (for example, a job listing),
 - `regs`, an array of "Regulation" objects, described in {{regulation}}.
-- `reports`, an array of keys which can be used to point to specific reports by name
+- `reports`, an array of keys which can be used to point to
+  specific reports by name
 
 ### Regulation objects {#regulation}
 
@@ -214,15 +230,22 @@ as a way to indicate prospective or retrospective compliance.
 
 # IANA Considerations
 
-IANA should register `reports.json` in the "Well-Known URIs" registry, with the following values:
+IANA should register `reports.json`
+in the "Well-Known URIs" registry,
+with the following values:
 
 - URI suffix: `reports.json`
 
-- Change controller: IETF (is this the right choice, if this is an informational draft?  is there a better group to control updates to this specification?)
+- Change controller: IETF
+  (is this the right choice,
+  if this is an informational draft?
+  is there a better group to control
+  updates to this specification?)
 
 - Specification document(s): This document
 
-- Status: provisional (unless we see wider adoption, in which case we should ask for permanent)
+- Status: provisional (unless we see wider adoption,
+  in which case we should ask for permanent)
 
 - Related information: Any other examples we want to point to?
 
@@ -254,32 +277,55 @@ For example, you can validate this using with {{JV}}:
 jv reports-schema.json reports.json
 ~~~
 
-Note that JSON Schema cannot represent foreign key constraints, so the fact that each `/operations/*/reports` must reference a named member of `/reports` needs to be enforced separately.
+Note that JSON Schema
+cannot represent foreign key constraints,
+so the fact that each `/operations/*/reports`
+must reference a named member of `/reports`
+needs to be enforced separately.
 
 # Examples of Regulatory Regimes
 
 Please propose more pointers for this subsection!
 
-- {{NYC-LL144}} established requirements for employers in New York City to publish reports of audits about automated decision-making tools used for hiring
-- Colorado's SB 289 {{CO-SB26189}} requires deployers of automated decision-making systems to provide consumers with pre-use notices about the design and deployment of such systems on their websites
-- The California Consumer Privacy Act {{CCPA}} requires businesses
-  to create "Risk Assessment Reports" about their use of Automated Decision-Making Technology (ADMT)
+- {{NYC-LL144}} established requirements for
+  employers in New York City
+  to publish reports of audits about
+  automated decision-making tools used for hiring.
+- Colorado's SB 289 {{CO-SB26189}} requires
+  deployers of automated decision-making systems
+  to provide consumers with pre-use notices
+  about the design and deployment of such systems
+  on their websites.
+- The California Consumer Privacy Act {{CCPA}}
+  requires businesses
+  to create "Risk Assessment Reports"
+  about their use of
+  Automated Decision-Making Technology (ADMT)
   as well as pre-use notices about ADMT use
   and regular cybersecurity audits.
 
 ## Example Regulatory Text
 
-A regulation or law that relies on this mechanism to point toward relevant reports can cite it using text similar to the following:
+A regulation or law
+that relies on this mechanism
+to point toward relevant reports
+can cite it using text similar to the following:
 
-> Any Covered Organization that has a public website shall
-> publicly point to the Required Reports associated with each Covered Operation using
-> a widely understood mechanism such as the `reports.json` specification.
-> The Required Reports associated with this act shall refer to
-> the act as `https://springfield.example/citycouncil/acts/2025/114`
+> Any Covered Organization that has
+> a public website shall
+> publicly point to the Required Reports
+> associated with each Covered Operation using
+> a widely understood mechanism such as
+> the `reports.json` specification.
+> The Required Reports associated with this act
+> shall refer to the act as
+> `https://springfield.example/citycouncil/acts/2025/114`
 
 (note that this text presumes that the regulation
 has defined the terms
-"Covered Organization", "Covered Operation", and "Required Reports")
+"Covered Organization",
+"Covered Operation", and
+"Required Reports")
 
 # Third-party Hosting
 
