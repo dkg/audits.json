@@ -239,7 +239,9 @@ IANA should register `reports.json` in the "Well-Known URIs" registry, with the 
 
 # JSON Schema For `reports.json`
 
-The following JSON Schema (see {{?I-D.bhutton-json-schema-01}}) can be used to validate an `reports.json` summary file.
+The following JSON Schema
+(see {{?I-D.ietf-jsonschema-json-schema}})
+can be used to validate an `reports.json` summary file.
 
 {: sourcecode-name="reports-schema.json"}
 ~~~ json
