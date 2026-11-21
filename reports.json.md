@@ -58,15 +58,39 @@ or reports on sustainable business practices.
 
 # Introduction
 
-An increasing number of regulatory regimes require organizations involved in certain business practices to provide a degree of transparency in their business operations by posting reports in an accessible location.
-For example, New York City's 2021 Local Law 144 ({{NYC-LL144}}) established auditing requirements for employers who use automated decision-making tools in the employment process, but it has proved challenging to even find these audit reports effectively (see {{?Auditing-the-Audits=DOI.10.1145/3715275.3732004}}).
+An increasing number of regulatory regimes require
+organizations involved in certain business practices
+to provide a degree of transparency
+in their business operations
+by posting reports in an accessible location.
+For example, New York City's 2021 Local Law 144 ({{NYC-LL144}})
+established auditing requirements
+for employers who use automated decision-making tools
+in the employment process,
+but it has proved challenging
+to even find these audit reports effectively
+(see {{?Auditing-the-Audits=DOI.10.1145/3715275.3732004}}).
 
-For a business that has a website, the natural place to provide access to the audit report is on that website.
-This document describes a standard mechanism that can be used to point to any report posted associated with regulatory compliance.
+For a business that has a website,
+the natural place to provide access
+to the audit report is on that website.
+This document describes a standard mechanism
+that can be used to point to any report posted
+associated with regulatory compliance.
 
-The mechanism is a `reports.json` summary document, found at a well-known URL, which allows the hosting domain to refer to specific business operations, relevant regulatory regimes, and their associated reports.
+The mechanism is a `reports.json` summary document,
+found at a well-known URL,
+which allows the hosting domain
+to refer to specific business operations,
+relevant regulatory regimes, and
+their associated reports.
 
-Adoption of this mechanism should make it easier for businesses to comply with these requirements, while also making it easier for researchers, analysts, and regulators to assess compliance and evaluate the overall effectiveness of the regulations.
+Adoption of this mechanism should make it easier
+for businesses to comply with these requirements,
+while also making it easier for
+researchers, analysts, and regulators
+to assess compliance and
+evaluate the overall effectiveness of the regulations.
 
 ## Requirements Language
 
@@ -74,28 +98,61 @@ Adoption of this mechanism should make it easier for businesses to comply with t
 
 ## Terminology
 
-- A "report" is a document produced by an organization or an independent entity commissioned by the organization to describe -- according to some kind of regulatory compliance -- a part of the organization's business operations.
+- A "report" is a document
+  produced by an organization or
+  an independent entity commissioned by the organization
+  to describe
+  -- according to some kind of regulatory compliance --
+  a part of the organization's business operations.
 
 ## Goals
 
-- Provide a standardized way for an organization to publicize reports associated with given regulatory requirements.
+- Provide a standardized way for
+  an organization to publicize reports
+  associated with given regulatory requirements.
 
-- Provide a standardized way for a reviewer of reports associated with a regulatory requirement to find those reports.
+- Provide a standardized way for
+  a reviewer of reports
+  associated with a regulatory requirement
+  to find those reports.
 
 ## Non-Goals
 
-Discovering a report is merely the first step in a process of having an effective regulatory regime based on these self-hosted reports.
-This specification is focused on satisfying this necessary but insufficient stage of larger work.
+Discovering a report is
+merely the first step in
+a process of having an effective
+regulatory regime based on these self-hosted reports.
+This specification is focused on
+satisfying this necessary but
+insufficient stage of larger work.
 
-- This specification makes no attempt to describe the syntax or semantics of any particular report.
-  The underlying assumption is that the reports for different regulations or compliance measures will have different requirements for content, structure, syntax, and so on.
+- This specification makes no attempt
+  to describe the syntax or semantics
+  of any particular report.
+  The underlying assumption is
+  that the reports for different regulations or compliance measures
+  will have different requirements
+  for content, structure, syntax, and so on.
 
-- This specification also does not associate a real-world organization with a particular domain name.
-  If a researcher wants to find the reports associated with Example Corp, they need to associate Example Corp with the `example.com` domain name independently in order to use this specification.
-  Likewise, any regulation making use of this mechanism needs to explicitly describe the link between the regulated entity and the domain name or domain names on which it is expected to publish this summary.
+- This specification also does not associate
+  a real-world organization with a particular domain name.
+  If a researcher wants to find the reports
+  associated with Example Corp,
+  they need to associate Example Corp with the `example.com` domain name
+  independently in order to use this specification.
+  Likewise, any regulation making use of this mechanism
+  needs to explicitly describe the link between
+  the regulated entity and the domain name or domain names
+  on which it is expected to publish this summary.
   
-- This specification does not describe a way for a casual visitor to a given website to find these reports.
-  A regulation that requires easy public accessibility of a report may need to offer additional user interface or user experience guidance in addition to requiring the use of this mechanism.
+- This specification does not describe
+  a way for a casual visitor
+  to a given website to find these reports.
+  A regulation that requires
+  easy public accessibility of a report
+  may need to offer additional
+  user interface or user experience guidance
+  in addition to requiring the use of this mechanism.
 
 # Locating The reports.json Summary {#location}
 
