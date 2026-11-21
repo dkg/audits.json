@@ -1,7 +1,7 @@
 +------------+        .------------.
 | operations |   .-->| uri          |
 +------------+  |    | [not_before] |
-| urls       |  |    | [not_after]  |
+| uris       |  |    | [not_after]  |
 | regs       +-'      '------------'
 | reports    +-.
 +------------+  |

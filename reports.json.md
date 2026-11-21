@@ -186,11 +186,11 @@ The overall object relationship looks like this:
 The `reports` member is an object where each named member is
 an object with the following members:
 
-- `title`, simple textual string describing the report, and
+- `title`, simple textual string describing the report.
 - `date`, date object describing the calendar date
-  (year, month, and day) of the report's publication, and
+  (year, month, and day) of the report's publication.
 - `urls`, an array of URLs that point to
-  the relevant materials for the report
+  the relevant materials for the report.
 
 ## operations Content
 
@@ -198,12 +198,14 @@ The `operations` member is a list of objects,
 each of which describes some set of business operations,
 via the following members:
 
-- `urls`, an array of URLs,
+- `uris`, an array of URIs,
   each of which describes a business operation
-  covered by this object (for example, a job listing),
+  covered by this object (for example, a job listing).
+  Typically, each of these will be a URL that can be
+  dereferenced to learn more about the relevant business operation.
 - `regs`, an array of "Regulation" objects, described in {{regulation}}.
 - `reports`, an array of keys which can be used to point to
-  specific reports by name
+  specific reports by name.
 
 ### Regulation objects {#regulation}
 

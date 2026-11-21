@@ -10,7 +10,7 @@
       "items": {
         "type": "object",
         "properties": {
-          "urls": {
+          "uris": {
             "type": "array",
             "items": {
               "type": "string",
@@ -55,7 +55,7 @@
           }
         },
         "required": [
-          "urls",
+          "uris",
           "regs",
           "reports"
         ]

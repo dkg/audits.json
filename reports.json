@@ -1,7 +1,7 @@
 {
   "operations": [
     {
-      "urls": [
+      "uris": [
         "https://example.com/jobs/sysadmin",
         "https://example.com/jobs/clerk"
       ],
@@ -12,7 +12,7 @@
       "reports": [ "fizz", "sparkle" ]
     },
     {
-      "urls": [
+      "uris": [
         "https://example.com/jobs/cfo",
         "https://example.com/jobs/cto"
       ],
