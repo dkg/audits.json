@@ -1,8 +1,8 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "http://ietf.org/json_schemas/audit_schema.json",
-  "title": "Audit Report Summary",
-  "description": "Automated Discovery of Audit Reports",
+  "$id": "http://ietf.org/json_schemas/reports_schema.json",
+  "title": "Report Summary",
+  "description": "Automated Discovery of Reports",
   "type": "object",
   "properties": {
     "operations": {
@@ -44,12 +44,12 @@
             "uniqueItems": true,
             "minItems": 1
           },
-          "audits": {
+          "reports": {
             "type": "array",
             "items": {
               "type": "string"
             },
-            "description": "property of top-level 'audits' object",
+            "description": "property of top-level 'reports' object",
             "uniqueItems": true,
             "minItems": 1
           }
@@ -57,11 +57,11 @@
         "required": [
           "urls",
           "regs",
-          "audits"
+          "reports"
         ]
       }
     },
-    "audits": {
+    "reports": {
       "type": "object",
       "additionalProperties": {
         "type": "object",
@@ -93,6 +93,6 @@
   },
   "required": [
     "operations",
-    "audits"
+    "reports"
   ]
 }

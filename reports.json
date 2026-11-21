@@ -9,7 +9,7 @@
         {"uri":
          "https://codelibrary.amlegal.com/codes/newyorkcity/latest/NYCrules/0-0-0-138391"}
       ],
-      "audits": [ "fizz", "sparkle" ]
+      "reports": [ "fizz", "sparkle" ]
     },
     {
       "urls": [
@@ -20,10 +20,10 @@
         {"uri":
          "https://codelibrary.amlegal.com/codes/newyorkcity/latest/NYCrules/0-0-0-138391"}
       ],
-      "audits": [ "fizz" ]
+      "reports": [ "fizz" ]
     }
   ],
-  "audits": {
+  "reports": {
     "fizz": {
       "title": "Fizz Resume Prioritization Service",
       "urls": [

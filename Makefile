@@ -4,7 +4,7 @@
 
 # apt install weasyprint xml2rfc ruby-kramdown-rfc2629
 
-draft = audits.json
+draft = reports.json
 OUTPUT = $(draft).txt $(draft).html $(draft).xml $(draft).pdf
 
 all: $(OUTPUT)
@@ -32,7 +32,7 @@ clean:
 check-spell:
 	codespell --ignore-words .ignore-words $(draft).md
 check-schema:
-	jv --assert-format --output detailed audits-schema.json audits.json
+	jv --assert-format --output detailed reports-schema.json reports.json
 
 check: check-spell check-schema
 .PHONY: clean all check publish check-spell check-schema
