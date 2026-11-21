@@ -368,7 +368,14 @@ under such a third-party-hosted arrangement.
 # Document History
 
 {:numbered="false" removeInRFC="true"}
-## Changes between -00 and -01
+## Changes between audits.json-01 and reports.json-00
+
+- rename from `audits.json` to `reports.json`
+- add date ranges for `operations`
+- describe third-party hosting
+
+{:numbered="false" removeInRFC="true"}
+## Changes between audits.json-00 and audits.json-01
 
 - added references to CCPA
 - align schema test for jv CLI API 0.7
