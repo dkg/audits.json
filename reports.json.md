@@ -1,7 +1,7 @@
 ---
 title: Automated Discovery Of Self-Published Reports (reports.json)
 abbrev: reports.json
-docname: draft-dkg-reports-json-00
+docname: draft-dkg-reports-json-01
 category: info
 v: 3
 ipr: trust200902
